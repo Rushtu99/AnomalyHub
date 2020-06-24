@@ -1,0 +1,22 @@
+.*{
+    margin:0;
+    padding:0;
+}
+
+.box1 {
+  border: solid black 2px;
+  height: 100vh;
+  overflow: scroll;
+  width: 40%;
+}
+.box2 {
+  border: solid black 2px;
+  height: 100vh;
+  overflow: scroll;
+  width: 60%;
+}
+
+.peep {
+  height: 60px;
+  font-size: 20px;
+}
