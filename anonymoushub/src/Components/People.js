@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Card} from 'reactstrap';
+import { Card } from 'reactstrap';
 import '../MyStyles.css';
 class People extends Component {
 
@@ -11,12 +11,12 @@ class People extends Component {
         return (
             <Card className='bg-light mb-3' >
                 <div >
-                    <div className='card-header peep'>
-                        {this.props.name}
-                    </div>
+                    <button className='btn btn-success peep' onClick={() => this.props.chatSelect(this.props.element)}>
+                        {this.props.element.name}
+                    </button>
                 </div>
             </Card>
-        )
+        );
     }
 }
 

@@ -4,41 +4,34 @@ import Message from './Message.js';
 
 
 class Chat extends Component {
-    // constructor(props) {
-    //     super(props);
-    // }
+    constructor(props) {
+        super(props);
+    }
 
 
     render() {
-        // import message from somewhere
-        //dummy Message
-        var messageData = [
-            {
-                text: 'wassup',
-                Time: 1
-            },
-            {
-                text: 'bitch',
-                Time: 2
-            },
-            {
-                text: 'Dummy',
-                Time: 3
-            }]
-
-        // var messageList = messageData.map(element => {
-        //     return (
-        //         // <Message text={element.text} time={element.time} >
-        //         // </Message>
-        //     )
-        // });
-        // console.log(messageList);
+        if (this.props.person) {
+            var messages = (this.props.person.messageData).map(element => {
+                return (
+                    
+                        <div className="alert alert-dismissible alert-light">
+                            <Message text={element.text} time={element.Time} >
+                            </Message>
+                        </div>
+                )
+            });
+        }
+        console.log(messages);
+        
         return (
             <div className='box2'>
-                <div className="alert alert-dismissible alert-light">
-                    <Message text="dum" time = "3" />
-                </div>
+                {messages}
             </div>
+            // <div className='box2'>
+            //             <div className="alert alert-dismissible alert-light">
+            //                 <Message text='dum87' time='37' />
+            //             </div>
+            //         </div>
         );
     }
 }
