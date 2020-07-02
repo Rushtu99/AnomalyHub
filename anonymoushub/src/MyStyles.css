@@ -3,6 +3,11 @@
     padding:0;
 }
 
+.login{
+  justify-content: center;
+  align-items: center;
+}
+
 .box1 {
   border: solid black 2px;
   height: 100vh;
