@@ -9,19 +9,26 @@
 }
 
 .box1 {
-  border: solid black 2px;
+
   height: 100vh;
   overflow: scroll;
-  width: 40%;
+  width: 30%;
 }
 .box2 {
-  border: solid black 2px;
+
   height: 100vh;
+  width: 70%;
+}
+
+.box3{
+  height: 90vh;
   overflow: scroll;
-  width: 60%;
+  width: 100%;
 }
 
 .peep {
+  text-align: left;
   height: 60px;
+  width: 100%;
   font-size: 20px;
 }

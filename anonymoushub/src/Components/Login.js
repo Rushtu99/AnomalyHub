@@ -9,8 +9,8 @@ class LogIn extends Component {
 
     render() {
         return (
-            <Container className='login text-center'>
-                <Form>
+            <Container  className='login text-center'>
+                <Form style={{paddingTop:200}}>
                     <FormGroup>
                         <Label for="exampleEmail">Email</Label>
                         <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />

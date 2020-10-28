@@ -12,7 +12,8 @@ class Main extends Component {
 
         this.state = {
             selectedPerson: null,
-            loggedIn: false
+            loggedIn: false,
+            
         };
     }
 
@@ -30,15 +31,14 @@ class Main extends Component {
     }
 
     render() {
-        console.log(this.state);
         return (
-            <Container>
+            <div className="ml-3 mr-3 p-0">
                 {!this.state.loggedIn && <LogIn login = {this.login.bind(this)} />}
                 {this.state.loggedIn && <div className='row' >
-                    <NameList className='col-6' style={{ margin: 3 }} chatSelect={this.chatSelect.bind(this)} />
-                    <Chat className='col-6' style={{ margin: 3 }} person={this.state.selectedPerson} />
+                    <NameList className='col-6' chatSelect={this.chatSelect.bind(this)} />
+                    <Chat className='col-6' person={this.state.selectedPerson} />
                 </div>}
-            </Container>
+            </div>
         );
     }
 }

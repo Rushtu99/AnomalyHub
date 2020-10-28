@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card } from 'reactstrap';
+import {Button, Card, ButtonToggle } from 'reactstrap';
 import '../MyStyles.css';
 class People extends Component {
 
@@ -9,12 +9,10 @@ class People extends Component {
 
     render() {
         return (
-            <Card className='bg-light mb-3' >
-                <div >
-                    <button className='btn btn-success peep' onClick={() => this.props.chatSelect(this.props.element)}>
+            <Card className='bg-light mb-1' >
+                    <ButtonToggle color="primary" className='peep' onClick={() => this.props.chatSelect(this.props.element)}>
                         {this.props.element.name}
-                    </button>
-                </div>
+                    </ButtonToggle>
             </Card>
         );
     }
